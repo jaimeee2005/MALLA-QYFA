@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Malla Química y Farmacia</title>
+  <script type="module">
+    import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
+    mermaid.initialize({ startOnLoad: true });
+  </script>
+</head>
+<body>
+  <h1>Malla Química y Farmacia</h1>
+  <div class="mermaid">
+    graph TD
+
+    %% Semestre 1
+    QG1["Química General I"]
+    BC["Biología Celular"]
+    MAT["Matemática"]
+    INTRO["Intro a las Cienci..."]
+    INTEQF["Integración Habilidades QF"]
+    ANTRO["Antropología"]
+
+    %% Semestre 2
+    QG2["Química General II"]
+    CDIF["Cálculo Diferencial"]
+    FIS["Física"]
+    BIOEST["Bioestadística"]
+    ÉTICA["Ética"]
+    FQF["Fundamentos de Química Farmacéutica"]
+
+    %% Semestre 3
+    QA["Química Analítica"]
+    QO["Química Orgánica"]
+    FQ["Fisicoquímica"]
+    FI["Fisiología Integrada"]
+    SP["Salud Poblacional"]
+
+    %% Semestre 4
+    AI["Análisis Instrumental"]
+    QOA["Química Orgánica Avanzada"]
+    BF["Bioquímica General"]
+    FISIOP["Fisiopatología"]
+    EPID["Epidemiología"]
+    GESTION["Gestión Personal y Habilidades"]
+
+    %% Semestre 5
+    FARMA1["Farmacología I"]
+    SALUDD["Salud Digital"]
+    MICRO["Microbiología"]
+    TF1["Tecnología Farmacéutica I"]
+    QF1["Química Farmacéutica I"]
+    PERSONA["Persona y Sociedad"]
+
+    %% Semestre 6
+    FARMA2["Farmacología II"]
+    BIOETICA["Bioética"]
+    TF2["Tecnología Farmacéutica II"]
+    QF2["Química Farmacéutica II"]
+    PRAC1["Práctica I"]
+
+    %% Semestre 7
+    METOD["Metodología de Investigación"]
+    FC1["Farmacia Clínica y Atención Farmacéutica I"]
+    LEGIS["Legislación Farmacéutica"]
+    FITO["Farmacognosia y Fitoterapia"]
+    CALIDAD["Control y Aseguramiento de Calidad"]
+
+    %% Semestre 8
+    FC2["Farmacia Clínica y Atención Farmacéutica II"]
+    BIOFARMA["Biofarmacia"]
+    TOX["Toxicología"]
+    FARMASIS["Farmacia Asistencial"]
+    PRAC2["Práctica II: Farmacia Comunitaria"]
+
+    %% Semestre 9
+    GESTMK["Gestión y Marketing Farmacéutico"]
+    FARMAIND["Farmacología Industrial y Toxicología"]
+    ELECT1["Electivo I"]
+    ELECT2["Electivo II"]
+
+    %% Semestre 10
+    INTERNADO["Internado"]
+    ELECT3["Electivo III"]
+    ELECT4["Electivo IV"]
+
+    %% Relaciones (prerrequisitos principales)
+    QG1 --> QG2
+    QG2 --> QA
+    QA --> AI
+    QO --> QOA
+    QG1 --> QO
+    QO --> QA
+    QA --> QF1
+    QF1 --> QF2
+    FIS --> FQ
+    FQ --> BF
+    BF --> FARMA1
+    FARMA1 --> FARMA2
+    TF1 --> TF2
+    FC1 --> FC2
+    PRAC1 --> PRAC2
+    FC2 --> INTERNADO
+    FARMASIS --> INTERNADO
+    TOX --> INTERNADO
+    QF2 --> CALIDAD
+    CALIDAD --> INTERNADO
+  </div>
+</body>
+</html>
